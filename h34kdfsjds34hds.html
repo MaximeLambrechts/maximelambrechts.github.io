@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Énigme – Étape 2</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f5f0e6;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
 
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 5vw;
+      margin-bottom: 16px;
+    }
+
+    .clue {
+      font-size: 5vw;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+
+    input {
+      padding: 1em;
+      font-size: 5vw;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 1em;
+      font-size: 5vw;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #success {
+      display: none;
+      margin-top: 30px;
+      font-size: 5vw;
+      font-weight: bold;
+      color: #2d6a4f;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 32px; }
+      p, .clue, input, button, #success { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛡️ Énigme – Étape 2</h1>
+
+  <div class="clue">
+    Pour la suite de l'aventure, diriges-toi vers <strong>Windsor Castle</strong>, et lis ensuite le reste de cette page....
+     <br><br><br>
+    Tu te trouves dans une forteresse royale, habitée depuis des siècles.<br><br>
+    Dans l’une des pièces les plus riches, les murs sont couverts d’armures et d’épées croisées.<br>
+    À un certain endroit, tu peux voir :<br>
+    ➤ Un dragon rouge,<br>
+    ➤ Une licorne blanche,<br>
+    ➤ Et un blason royal.<br><br>
+    Ce blason symbolise l’unité de trois royaumes…<br>
+    Regarde bien sous les créneaux ou au-dessus des portes :<br>
+    <strong>Quel animal mythique soutient le blason du Royaume-Uni, avec la licorne ?</strong><br><br>
+    🔍 Le mot de passe est le nom de cet animal, tout en minuscules.
+  </div>
+
+  <input type="text" id="password" placeholder="Mot de passe" /><br>
+  <button onclick="checkPassword()">Valider</button>
+
+  <div id="success">
+    🦁 Bravo ! Tu avances vers la suite de l'aventure...
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      if (input === "lion") {
+        document.getElementById("success").style.display = "block";
+      } else {
+        alert("Ce n’est pas le bon mot… Essaie encore !");
+      }
+    }
+  </script>
+
+</body>
+</html>
