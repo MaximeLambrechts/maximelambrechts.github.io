@@ -43,17 +43,9 @@
       cursor: pointer;
     }
 
-    #hidden-text {
-      display: none;
-      margin-top: 30px;
-      font-size: 5vw;
-      font-weight: bold;
-      color: #2d6a4f;
-    }
-
     @media (min-width: 600px) {
       h1 { font-size: 32px; }
-      p, input, button, #hidden-text { font-size: 20px; }
+      p, input, button { font-size: 20px; }
     }
   </style>
 </head>
@@ -65,16 +57,12 @@
   <input type="text" id="password" placeholder="Mot de passe" /><br>
   <button onclick="checkPassword()">Valider</button>
 
-  <div id="hidden-text">
-    🎉 Bravo ! Tu as trouvé le mot magique. Prépare-toi pour la suite de l'aventure...
-  </div>
-
   <script>
     function checkPassword() {
       const input = document.getElementById("password").value.trim().toLowerCase();
-      const correctPassword = "imagine"; // change selon ton mot-clé
+      const correctPassword = "imagine";
       if (input === correctPassword) {
-        document.getElementById("hidden-text").style.display = "block";
+        window.location.href = "h34kdfsjds34hds.html"; // Redirige vers la suite
       } else {
         alert("Ce n’est pas le bon mot… Essaie encore !");
       }
