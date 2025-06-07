@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Énigme</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f5f0e6;
+      padding: 40px;
+      text-align: center;
+    }
+    #hidden-text {
+      display: none;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #2d6a4f;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>🔍 Entrez le mot de passe</h1>
+  <p>Indice : chanson emblématique d’un rêveur pacifiste…</p>
+
+  <input type="text" id="password" placeholder="Mot de passe" />
+  <button onclick="checkPassword()">Valider</button>
+
+  <div id="hidden-text">
+    🎉 Bravo ! Tu as trouvé le mot magique. Prépare-toi pour la suite de l'aventure...
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      const correctPassword = "imagine"; // change selon ton mot-clé
+      if (input === correctPassword) {
+        document.getElementById("hidden-text").style.display = "block";
+      } else {
+        alert("Ce n’est pas le bon mot… Essaie encore !");
+      }
+    }
+  </script>
+
+</body>
+</html>
