@@ -88,15 +88,12 @@
   <input type="text" id="password" placeholder="Mot de passe" /><br>
   <button onclick="checkPassword()">Valider</button>
 
-  <div id="success">
-    🦁 Bravo ! Tu avances vers la suite de l'aventure...
-  </div>
-
   <script>
     function checkPassword() {
       const input = document.getElementById("password").value.trim().toLowerCase();
-      if (input === "lion") {
-        document.getElementById("success").style.display = "block";
+      const correctPassword = "lion";
+      if (input === correctPassword) {
+        window.location.href = "3dsfs4jlaxk35.html"; // Redirige vers la suite
       } else {
         alert("Ce n’est pas le bon mot… Essaie encore !");
       }
