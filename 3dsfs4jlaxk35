@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Énigme – Étape 3</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f5f0e6;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 20px;
+    }
+
+    p, .clue {
+      font-size: 5vw;
+      margin-bottom: 16px;
+    }
+
+    .clue {
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+
+    input {
+      padding: 1em;
+      font-size: 5vw;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 1em;
+      font-size: 5vw;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #success {
+      display: none;
+      margin-top: 30px;
+      font-size: 5vw;
+      font-weight: bold;
+      color: #2d6a4f;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 32px; }
+      p, .clue, input, button, #success { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚉 Énigme – Étape 3</h1>
+
+  <div class="clue">
+    Tu es maintenant dans une gare qui porte le nom d’une célèbre bataille napoléonienne.<br><br>
+    Si tu observes bien autour de toi, tu verras les grands départs…<br><br>
+    Certains trains quittent Londres sous la Manche,<br>
+    Et arrivent dans une ville connue pour :<br>
+    ➤ Sa Grand Place,<br>
+    ➤ Ses gaufres,<br>
+    ➤ Son accent chantant,<br>
+    ➤ Et… son sens de l’évasion 🗝️<br><br>
+    Tu ne vas pas en Belgique, ni à Paris, mais dans cette ville du Nord où l’on sait jouer.<br><br>
+    🔍 Devine le nom de cette ville en 5 lettres.<br><br>
+    <strong>Le mot de passe est ce nom, tout en minuscules.</strong>
+  </div>
+
+  <input type="text" id="password" placeholder="Mot de passe" /><br>
+  <button onclick="checkPassword()">Valider</button>
+
+  <div id="success">
+    🎁 Bravo ! Tu as trouvé la destination...  
+    Prépare-toi pour un jeu d’évasion grandeur nature à Lille 🎉
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      if (input === "lille") {
+        document.getElementById("success").style.display = "block";
+      } else {
+        alert("Ce n’est pas le bon mot… Essaie encore !");
+      }
+    }
+  </script>
+
+</body>
+</html>
