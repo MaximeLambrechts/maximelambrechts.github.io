@@ -2,29 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Énigme</title>
   <style>
     body {
       font-family: Georgia, serif;
       background: #f5f0e6;
-      padding: 40px;
+      padding: 20px;
+      margin: 0;
       text-align: center;
     }
+
+    h1 {
+      font-size: 7vw;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 5vw;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 1em;
+      font-size: 5vw;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 1em;
+      font-size: 5vw;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
     #hidden-text {
       display: none;
-      margin-top: 20px;
+      margin-top: 30px;
+      font-size: 5vw;
       font-weight: bold;
       color: #2d6a4f;
     }
-    input {
-      padding: 8px;
-      font-size: 16px;
-    }
-    button {
-      padding: 8px 12px;
-      font-size: 16px;
-      margin-left: 10px;
-      cursor: pointer;
+
+    @media (min-width: 600px) {
+      h1 { font-size: 32px; }
+      p, input, button, #hidden-text { font-size: 20px; }
     }
   </style>
 </head>
@@ -33,7 +62,7 @@
   <h1>🔍 Entrez le mot de passe</h1>
   <p>Indice : chanson emblématique d’un rêveur pacifiste…</p>
 
-  <input type="text" id="password" placeholder="Mot de passe" />
+  <input type="text" id="password" placeholder="Mot de passe" /><br>
   <button onclick="checkPassword()">Valider</button>
 
   <div id="hidden-text">
