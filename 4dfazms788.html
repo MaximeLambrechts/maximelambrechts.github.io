@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Énigme – Étape 4</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f5f0e6;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 20px;
+    }
+
+    p, .clue {
+      font-size: 5vw;
+      margin-bottom: 16px;
+    }
+
+    .clue {
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+
+    input {
+      padding: 1em;
+      font-size: 5vw;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 1em;
+      font-size: 5vw;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #success {
+      display: none;
+      margin-top: 30px;
+      font-size: 5vw;
+      color: #2d6a4f;
+    }
+
+    a.gift-link {
+      display: block;
+      margin-top: 20px;
+      font-size: 5vw;
+      color: #1d3557;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 32px; }
+      p, .clue, input, button, #success, a.gift-link { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🦁 Lion</h1>
+
+  <div class="clue">
+      <p style="color:#16c74b";>🎁 Bravo ! Tu as trouvé la ville...</p>
+    Mais que vas-tu y faire ?<br><br>
+    Tu arpenteras ses ruelles,<br>
+    Le nez en l’air et l’œil attentif,<br>
+    À la recherche d’indices, de cachettes et de codes oubliés.<br><br>
+    Ton allié sera la logique,<br>
+    Ton arme, ta curiosité.<br><br>
+    Aucun cadenas, mais des portails invisibles,<br>
+    Que seuls les esprits affûtés sauront déverrouiller.<br><br>
+    🔍 Quelle activité t’attend dans les rues de Lille, où les énigmes remplacent les murs ?
+  </div>
+
+  <input type="text" id="password" placeholder="Mot de passe" /><br>
+  <button onclick="checkPassword()">Valider</button>
+
+  <div id="success">
+    ✅ Bravo ! Tu as trouvé : une aventure pleine d’énigmes dans les rues de Lille.<br>
+    Voici ton cadeau :
+    <a class="gift-link" href="https://www.john-doe.fr/lille/escape-game-outdoor-lille/#/catalog/b1fc54dd-0a51-4617-910f-4d59e71a307e" target="_blank">
+      Lien vers ton escape game outdoor
+    </a>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      if (input === "escape" || input === "escape game") {
+        document.getElementById("success").style.display = "block";
+      } else {
+        alert("Ce n’est pas le bon mot… Essaie encore !");
+      }
+    }
+  </script>
+
+</body>
+</html>
