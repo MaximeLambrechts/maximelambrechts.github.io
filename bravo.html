@@ -3,43 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎉 Ton cadeau !</title>
+  <title>🎁 Ton cadeau !</title>
   <style>
     body {
-      font-family: Georgia, serif;
-      background-color: #f5f0e6;
+      font-family: 'Georgia', serif;
+      background-color: #fffaf0;
       padding: 40px;
+      margin: 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     h1 {
-      font-size: 7vw;
-      margin-bottom: 20px;
+      font-size: 9vw;
+      margin-bottom: 10px;
+      color: #d62828;
+    }
+
+    h2 {
+      font-size: 6vw;
+      margin-top: 0;
       color: #2d6a4f;
     }
 
     p {
       font-size: 5vw;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
 
     a {
       font-size: 5vw;
-      color: #1d3557;
+      color: #0077b6;
       text-decoration: underline;
     }
 
+    .balloons {
+      font-size: 10vw;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1vw;
+      opacity: 0.7;
+    }
+
     @media (min-width: 600px) {
-      h1 { font-size: 36px; }
+      h1 { font-size: 60px; }
+      h2 { font-size: 36px; }
       p, a { font-size: 22px; }
+      .balloons { font-size: 50px; }
     }
   </style>
 </head>
 <body>
 
-  <h1>🎉 Bravo !</h1>
-  <p>Tu as résolu toutes les énigmes...<br>
-  Et voici ton cadeau :</p>
+  <div class="balloons">🎈🎉🎈🥳🎈🎁🎈</div>
+
+  <h1>Joyeux anniversaire !</h1>
+  <h2>Tu as brillamment résolu toutes les énigmes 🎊</h2>
+
+  <p>Et voici ton cadeau :</p>
 
   <a href="https://www.john-doe.fr/lille/escape-game-outdoor-lille/#/catalog/b1fc54dd-0a51-4617-910f-4d59e71a307e" target="_blank">
     👉 Clique ici
