@@ -66,11 +66,12 @@
 </head>
 <body>
 
-  <h1>🚉 Énigme – Étape 3</h1>
+  <h1>🦁 Lion</h1>
 
   <div class="clue">
       
-    Bravo! Encore une étape de réussie! Retourne direction <strong>London</strong> et lis la suite de cette page en <strong>sortant du train 🚂.</strong>
+      <p style="color:#16c74b";>🎁 Bravo! Encore une étape de réussie!</p>
+    Retourne direction <strong>London</strong> et lis la suite de cette page en <strong>sortant du train 🚂.</strong>
       <br><br><br><br><br>
     Tu es maintenant dans une gare qui porte le nom d’une célèbre bataille napoléonienne.<br><br>
     Si tu observes bien autour de toi, tu verras les grands départs…<br><br>
@@ -88,16 +89,12 @@
   <input type="text" id="password" placeholder="Mot de passe" /><br>
   <button onclick="checkPassword()">Valider</button>
 
-  <div id="success">
-    🎁 Bravo ! Tu as trouvé la destination...  
-    Prépare-toi pour un jeu d’évasion grandeur nature à Lille 🎉
-  </div>
-
   <script>
     function checkPassword() {
       const input = document.getElementById("password").value.trim().toLowerCase();
-      if (input === "lille") {
-        document.getElementById("success").style.display = "block";
+      const correctPassword = "lille";
+      if (input === correctPassword) {
+        window.location.href = "4dfazms788.html"; // Redirige vers la suite
       } else {
         alert("Ce n’est pas le bon mot… Essaie encore !");
       }
