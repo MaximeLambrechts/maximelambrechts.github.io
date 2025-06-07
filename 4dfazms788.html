@@ -91,19 +91,11 @@
   <input type="text" id="password" placeholder="Mot de passe" /><br>
   <button onclick="checkPassword()">Valider</button>
 
-  <div id="success">
-    ✅ Bravo ! Tu as trouvé : une aventure pleine d’énigmes dans les rues de Lille.<br>
-    Voici ton cadeau :
-    <a class="gift-link" href="https://www.john-doe.fr/lille/escape-game-outdoor-lille/#/catalog/b1fc54dd-0a51-4617-910f-4d59e71a307e" target="_blank">
-      Lien vers ton escape game outdoor
-    </a>
-  </div>
-
   <script>
     function checkPassword() {
       const input = document.getElementById("password").value.trim().toLowerCase();
       if (input === "escape" || input === "escape game") {
-        document.getElementById("success").style.display = "block";
+        window.location.href = "bravo.html";
       } else {
         alert("Ce n’est pas le bon mot… Essaie encore !");
       }
